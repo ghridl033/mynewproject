@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <!-- Required meta tags -->
@@ -84,8 +84,6 @@
 
         }
 
-        
-
     </style>
 
   </head>
@@ -96,9 +94,9 @@
 
       <ul>
 
-        <li><a href="http://115.85.180.66:8000/login" target="_self"><span style="color:#212529;">로그인</span></a></li>
+        <li><a href="http://115.85.180.66:8000/logout" target="_self"><span style="color:#212529;">로그아웃</span></a></li>
         
-        <li><a href="http://115.85.180.66:8000/signup" target="_self"><span style="color:#212529;">회원가입</span></a></li>
+        <li><a href="http://115.85.180.66:8000/signup" target="_self"><span style="color:#212529;">정보수정</span></a></li>
         
         <li>이용안내</li>
         
@@ -110,7 +108,7 @@
       
     </div>
 
-    <div class='d-flex' >
+    <div class='d-flex'>
 
       <div style="margin-left:500px;">
         <h1><img src="static/rainbow.png" width=150 height=80>중국 직구 대행 쇼핑몰 <span style="font-size:1.2em;">FUFU</span></h1>
@@ -159,31 +157,12 @@
           </a>
         </div>
 
-        <div class="form-group1" style="float:left; border:3px solid gold; margin-top:10px; margin-left:1px; width:25%; border-radius:15px; height:402.32px;">
-          <h2 style="margin-left:10px; margin-right:10px; color:gold; border-bottom:1px solid gold;">LOGIN <span style="font-size:0.3em; color:black;">유효성 체크 : {{ err }}</span></h2>
-          
-          <form method='POST' action="/login2">
-          {% csrf_token %}
-            <p>
-              <label for="exampleInputEmail1" style="margin-left:10px;">Email address</label>
-              <input type="email" name="useremail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="이메일">
-              <small id="emailHelp" class="form-text text-muted">이메일 주소를 입력하세요.</small>
-            </p>
-            <p>
-              <label for="exampleInputPassword1" style="margin-left:10px;">Password</label>
-              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호">           
-            </p>
-            <P>
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">자동로그인</label>
-            </P>
-            <P>
-            <button type="submit" class="btn btn-primary btn-lg btn-block"><a href="http://115.85.180.66:8000/login2"><span style="color:white;">로그인</span></a></button>
-            </P>
-            
-            <button type="button" class="btn btn-warning btn-lg btn-block"><a href="http://115.85.180.66:8000/signup" target="_self"><span style="color:white;">회원가입</span></a></button> 
-        
-          </form>
+        <div class="form-group1" style= "text-align:center; float:left; border:3px solid gold; margin-top:10px; margin-left:1px; width:25%; border-radius:15px; height:402.32px;">
+          <h2 style="margin-left:10px; margin-right:10px; color:gold; border-bottom:1px solid gold;">로그인 성공</h2>
+          <span>안녕하세요, {{ message }}님</span>
+		  <img src="static/rose2.jpg" style="width: 350px; height: 250px;"><br>
+		  <span>장바구니</span>&nbsp&nbsp <span>비밀번호 변경</span>
+		  <button type="button" class="btn btn-warning btn-lg btn-block"><a href= "http://115.85.180.66:8000/logout"><span style="color:white">로그아웃</span></a></button>
         </div>
           
         <div style="clear:both;"></div>
@@ -240,9 +219,9 @@
         </tr>
 
         <tr>
-            <td><a href="https://detail.1688.com/offer/588488560982.html?spm=a260k.dacugeneral.201611281604.25.6633436cRuOBY8" target="_blank"><img src="static/airpotcase.jpg" width=200px; height=200px;></a>
-                <a href="https://detail.1688.com/offer/588488560982.html?spm=a260k.dacugeneral.201611281604.25.6633436cRuOBY8" target="_blank"><div style="color:black;">에어팟 케이스</div></a>
-                <a href="https://detail.1688.com/offer/588488560982.html?spm=a260k.dacugeneral.201611281604.25.6633436cRuOBY8" target="_blank"><div style="color:orange">10.00 CNY</div></a>
+            <td><a href="https://www.tmall.com/" target="_blank"><img src="static/airpotcase.jpg" width=200px; height=200px;></a>
+                <a href="https://www.tmall.com/" target="_blank"><div style="color:black;">에어팟 케이스</div></a>
+                <a href="https://www.tmall.com/" target="_blank"><div style="color:orange">10.00 CNY</div></a>
             </td>
 
             <td><a href="https://detail.1688.com/offer/520401767756.html?spm=a262eq.12572798.jsczf959.8.5fc32fb1MlAtWK" target="_blank"><img src="static/workout1.jpg" width=200px; height=200px;></a>
